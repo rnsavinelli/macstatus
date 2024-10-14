@@ -1,4 +1,4 @@
-use AppleScript version "2.4"
+use AppleScript version "2.8"
 use scripting additions
 use framework "Foundation"
 use framework "AppKit"

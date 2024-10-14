@@ -53,8 +53,6 @@
 	<string>This script needs access to administer this system to run.</string>
 	<key>OSAAppletShowStartupScreen</key>
 	<false/>
-	<key>OSAAppletStayOpen</key>
-	<true/>
 	<key>WindowState</key>
 	<dict>
 		<key>bundleDividerCollapsed</key>
@@ -68,11 +66,11 @@
 		<key>name</key>
 		<string>ScriptWindowState</string>
 		<key>positionOfDivider</key>
-		<real>371</real>
+		<real>443</real>
 		<key>savedFrame</key>
-		<string>20 376 700 678 0 0 1920 1055 </string>
+		<string>50 369 700 678 0 0 1920 1055 </string>
 		<key>selectedTab</key>
-		<string>description</string>
+		<string>result</string>
 	</dict>
 	<key>LSUIElement</key>
 	<string>1</string>
