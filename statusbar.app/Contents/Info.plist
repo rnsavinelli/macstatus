@@ -24,11 +24,9 @@
 	<string>aplt</string>
 	<key>LSMinimumSystemVersionByArchitecture</key>
 	<dict>
-		<key>x86_64</key>
-		<string>10.6</string>
+		<key>arm64</key>
+		<string>11.0</string>
 	</dict>
-	<key>LSRequiresCarbon</key>
-	<true/>
 	<key>NSAppleEventsUsageDescription</key>
 	<string>This script needs to control other applications to run.</string>
 	<key>NSAppleMusicUsageDescription</key>
@@ -53,6 +51,8 @@
 	<string>This script needs access to administer this system to run.</string>
 	<key>OSAAppletShowStartupScreen</key>
 	<false/>
+	<key>OSAAppletStayOpen</key>
+	<true/>
 	<key>WindowState</key>
 	<dict>
 		<key>bundleDividerCollapsed</key>
@@ -68,7 +68,7 @@
 		<key>positionOfDivider</key>
 		<real>443</real>
 		<key>savedFrame</key>
-		<string>50 369 700 678 0 0 1920 1055 </string>
+		<string>49 204 700 678 0 0 1470 918 </string>
 		<key>selectedTab</key>
 		<string>result</string>
 	</dict>
