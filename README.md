@@ -43,9 +43,10 @@ Example contents:
 To install the menu bar applet run:
 
   ```bash
+  cd /tmp
   git clone git@github.com:rnsavinelli/script-monitor.git
   cd script-monitor
-  sh ./install.sh
+  zsh ./install.sh
   ```
 In order to move the newly built application to the ```/Applications``` folder the script will prompt you to write your password as that commands need to be run as root.
 
