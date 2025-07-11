@@ -6,7 +6,7 @@ use framework "AppKit"
 property statusItem : missing value
 property timer : missing value
 
-property configDir : POSIX path of (do shell script "echo ~/.config/behold/")
+property configDir : POSIX path of (do shell script "echo ~/.config/script-monitor/")
 property scriptFilePath : configDir & "script"
 property prefsFilePath : configDir & "preferences"
 
@@ -41,7 +41,7 @@ on main()
 	theMenu's addItem:editSettingsItem
 	
 	-- About menu item
-	set aboutItem to current application's NSMenuItem's alloc()'s initWithTitle:"About" action:"showAbout:" keyEquivalent:"a"
+	set aboutItem to current application's NSMenuItem's alloc()'s initWithTitle:"About Script Monitor" action:"showAbout:" keyEquivalent:"a"
 	aboutItem's setTarget:me
 	theMenu's addItem:aboutItem
 	
@@ -65,16 +65,16 @@ end main
 -- Show About dialog
 on showAbout:(sender)
 	set alert to current application's NSAlert's alloc()'s init()
-	alert's setMessageText:"Behold"
+	alert's setMessageText:"Script Monitor"
 	
 	set infoText to "Version 1.0
 
-Behold is a small and extensible macOS apple
-developed by R. Nicolas Savinelli 
+Script Monitor is an simple and extensible menu bar applet developed by 
+Roberto Nicolas Savinelli 
 rnsavinelli@gmail.com
 
 "
-	set infoText to infoText & "The input script utilized by the applet and its preferences are stored in:
+	set infoText to infoText & "The input script utilized by this applet and its preferences are stored inside:
 " & configDir & "
 "
 	
@@ -98,7 +98,7 @@ on ensureConfigFilesExist()
 	
 	-- Create default script if missing
 	try
-		do shell script "[ -f " & quoted form of scriptFilePath & " ] || echo 'echo \"Welcome to Behold!\"' > " & quoted form of scriptFilePath
+		do shell script "[ -f " & quoted form of scriptFilePath & " ] || echo 'echo \"Welcome to Script Monitor!\"' > " & quoted form of scriptFilePath
 		do shell script "chmod +x " & quoted form of scriptFilePath
 	on error e
 		display alert "Error creating script file: " & e

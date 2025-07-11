@@ -1,1 +1,1 @@
-# Behold: the scriptable macOS menu bar applet
+# Script Monitor: the scriptable macOS menu bar applet
