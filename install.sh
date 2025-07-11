@@ -26,15 +26,15 @@ confirm() {
     esac
 }
 
-print_info "Statusbar.app Installer"
+print_info "Behold.app Installer"
 
-if confirm "Proceed with the installation of Statusbar.app?"; then
-    print_info "Removing old local build of Statusbar.app"
-    rm -fr ./Statusbar.app 
+if confirm "Proceed with the installation of Behold.app?"; then
+    print_info "Removing old local build of Behold.app"
+    rm -fr ./Behold.app 
     print_success "Old build removed."
 
-    print_info "Compiling statusbar.applescript..."
-    if osacompile -o Statusbar.app statusbar.applescript; then
+    print_info "Compiling Behold.applescript..."
+    if osacompile -o Behold.app Behold.applescript; then
         print_success "Compiled successfully."
     else
         print_error "Compilation failed. Exiting."
@@ -42,7 +42,7 @@ if confirm "Proceed with the installation of Statusbar.app?"; then
     fi
 
     print_info "Patching Info.plist..."
-    if patch ./Statusbar.app/Contents/Info.plist < ./patches/Info.plist.patch; then
+    if patch ./Behold.app/Contents/Info.plist < ./patches/Info.plist.patch; then
         print_success "Info.plist patched."
     else
         print_error "Failed to patch Info.plist."
@@ -50,19 +50,22 @@ if confirm "Proceed with the installation of Statusbar.app?"; then
     fi
 
     if confirm "Remove old installed version in /Applications/Utilities/ and replace it with the new build?"; then
-        sudo rm -rf /Applications/Utilities/Statusbar.app
+        sudo rm -rf /Applications/Utilities/Behold.app
         print_success "Old installed version removed."
         print_info "Moving new build to /Applications/Utilities/..."
-        if sudo mv ./Statusbar.app /Applications/Utilities/; then
+        if sudo mv ./Behold.app /Applications/Utilities/; then
             print_success "Moved successfully."
         else
             print_error "Failed to move app. Exiting."
             exit 1
         fi
+    else
+        print_warn "Installation halted."
+        exit 0
     fi
 
-    if confirm "Add Statusbar.app as a Login Item?"; then
-        osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Utilities/Statusbar.app", hidden:false}'
+    if confirm "Add Behold.app as a Login Item?"; then
+        osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Utilities/Behold.app", hidden:false}'
         print_success "Added to login items."
     else
         print_warn "Skipped adding to login items."

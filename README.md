@@ -1,1 +1,1 @@
-# Scriptable macOS status bar
+# Behold: the scriptable macOS menu bar applet
