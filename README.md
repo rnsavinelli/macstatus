@@ -4,7 +4,7 @@
 
 **Script Monitor** is a lightweight and extensible macOS menu bar applet written in AppleScript. It periodically executes a user-defined shell script and displays its output in the menu bar, making it ideal for monitoring system stats, weather, custom metrics, and more.
 
-[![How to Install Script Monitor](https://img.youtube.com/vi/Dt-rSDrOTXU/0.jpg)](https://www.youtube.com/watch?v=Dt-rSDrOTXU)
+[![How to Install Script Monitor](./thumbnail.png)](https://www.youtube.com/watch?v=Dt-rSDrOTXU)
 
 ---
 
